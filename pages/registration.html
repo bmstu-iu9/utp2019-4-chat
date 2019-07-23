@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+	<!-- <link rel="stylesheet" type="text/css" href="path to file"> -->
+	<meta charset="utf-8">
+	<title>Chat registration</title>
+</head>
+<body>
+<h1 align="center">Please enter your details</h1>
+<div align="center">
+	<form onsubmit="registration(this)">
+		<p><input type="text" placeholder="Username" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required /></p>
+		<p><input type="password" placeholder="Password" id="password" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,64}$" required /></p>
+		<p><input type="email" placeholder="Email" id="email" required /></p>
+		<button type="submit">Registration</button>
+	</form>
+</div>
+<div align="center">
+	<p>If you have an account:<br><button id="logBttn" type="button">Login</button></p>
+</div>
+</body>
+<script type="text/javascript" src="scripts/registration.js"></script>
+</html>

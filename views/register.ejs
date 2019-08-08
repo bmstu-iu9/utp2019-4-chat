@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+	<meta charset="utf-8">
+	<title>Chat registration</title>
+</head>
+<body>
+	<h1 align="center">Please enter your details</h1>
+	<% include ./partials/messages%>
+	<div align="center">
+		<form action="/users/register" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="name" id = "name" name="name" class="form-control" placeholder="Enter your name" value="<%= typeof name != 'undefined' ? name : '' %>">
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" class = "form-control" placeholder="Enter Email" value="<%= typeof email != 'undefined' ? email : '' %>">
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" class="form-control" placeholder="Create password" value="<%= typeof password != 'undefined' ? password : '' %>">
+			</div>
+
+			<div class="form-group">
+				<label for="password2">Confirm Password</label>
+				<input type="password" name="password2" id="password2" class = "form-control" placeholder="Confirm password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+			</div>
+			<button type="submit">Register</button>
+		</form>
+	</div>
+	<div align="center">
+		<p>Have An Account? <a href="/users/login">Login</a></p>
+	</div>
+</body>
+</html>

@@ -2,6 +2,14 @@
     "name": "Chat",
     "version": "0.0.1",
     "dependencies": {
-        "express": "^4.17.1"
+        "bcryptjs": "^2.4.3",
+        "connect-flash": "^0.1.1",
+        "ejs": "^2.6.2",
+        "ejs-layouts": "0.0.1",
+        "express": "^4.17.1",
+        "express-session": "^1.16.2",
+        "mongoose": "^5.6.9",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0"
     }
 }

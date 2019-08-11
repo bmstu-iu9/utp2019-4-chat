@@ -4,54 +4,41 @@
  <head>
   <meta charset="utf-8">
   <title>Chat</title> 
-  <!-- </script> -->
-  <!-- <link rel="stylesheet" type="text/css" href="... path to file"> -->
-   
-  <style>
-  header {
-    display: block;
-    background: #A3EE63;
-   }
-   aside {
-    background: #EED663;
-    width: 25%;
-    float: right;
-   }
-   article  {
-   background: #63E8EE;
-    margin-right: 25%;
-   }
-   footer {
-    background: #A3EE63;
-   }
-  </style>
-  
+  <link rel="stylesheet" type="text/css" href="chatstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
  </head>
  
- <body>
-  
-  <aside>
-  <header>
-  <p>Some buttons</p>
-  </header>
-  <p>Some edit informations</p>
-  </aside>
-  
-  <article>
-  <header>
-  <p>Some header</p>
-  </header>
-  <div id="main">Main</div>
-  <footer>
-  <!-- <form action="URL" onsubmit="send message to server and change Main"> -->
-  <p><input type="text" placeholder="Message" id="message" />
-  <button id="bttn" type="submit">Send</button></p>
-  <!-- </form> -->
-  </footer>
-  </article>
-  <script type="text/javascript" src="scripts/chat.js">
-  </script>
- </body>
+<body>
+	<div id="left-column">
+		<header id="left-top-row">
+			<form id="searchBar">
+				<input type="search" id="searchText" placeholder="Search..." />
+				<button type="submit" id="searchBtn"></button>
+			</form>
+		</header>
+
+		<div id="main"></div>
+
+		<footer id="left-bottom-row">
+			<button type="button" id="emodziBtn"></button>
+			<input type="text" placeholder="Message" id="message" />
+			<button id="bttn" type="submit"></button>
+		</footer>
+
+	</div>
+
+	<aside id="right-column">
+	<div id="right-top-row">
+	</div>
+	<div id="menu-place">
+	</div>
+	<div id="right-bottom-row">
+	</div>
+	</aside>
+
+	<script type="text/javascript" src="scripts/chat.js">
+	</script>
+</body>
 </html>
 
 <!--  -->

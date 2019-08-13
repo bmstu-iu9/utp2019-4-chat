@@ -6,24 +6,38 @@
   <title>Chat</title> 
   <link rel="stylesheet" type="text/css" href="chatstyle.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  </head>
  
 <body>
+	<div id="first-column">
+	</div>
+
 	<div id="left-column">
 		<header id="left-top-row">
+			<img src="logo.png" alt="Cham" id="logo-img">
+		        <img src="name.png" alt="Cham" id="name-img">
 			<form id="searchBar">
 				<input type="search" id="searchText" placeholder="Search..." />
 				<button type="submit" id="searchBtn"></button>
 			</form>
 		</header>
 
+		<div id="main-column"></div>
+
 		<div id="main"></div>
 
-		<footer id="left-bottom-row">
+		<header id="left-bottom-row">
 			<button type="button" id="emodziBtn"></button>
-			<input type="text" placeholder="Message" id="message" />
+			<textarea id="comment" placeholder="Message..." /></textarea>
 			<button id="bttn" type="submit"></button>
-		</footer>
+			<label id="label">
+      					<i class="material-icons" id="icons">attach_file</i>
+      					<span class="title" id="title"></span>
+      		        		<input type="file" id="file"/>
+   			</label>
+		</header>
 
 	</div>
 

@@ -97,7 +97,7 @@ body {
 /* text input */
 
 /*message*/
-#comment{
+#message{
   resize: none;
   width: 560px;
   float: right;
@@ -107,12 +107,6 @@ body {
   border-radius: 40px;
   padding: 15px;
   background: #F9F0DA;
-}
-#message {
-  width: auto;
-  float: right;
-  margin-right: 40px;
-  margin-top: 16px;
 }
 #emodziBtn {
   width: 0px;
@@ -129,17 +123,6 @@ body {
   content: "\f118";
   font-family: FontAwesome;
   color: #2E6B42;
-}
-#message {
-  width: 590px;
-  height: 42px;
-  padding-left: 15px;
-  border-radius: 42px;
-  border: 2px solid #2E6B42;
-  background: #F9F0DA;
-  outline: none;
-  position: relative;
-  transition: .3s linear;
 }
 #bttn {
   width: 0px;

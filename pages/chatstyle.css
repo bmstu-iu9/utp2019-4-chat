@@ -56,7 +56,6 @@ body {
 }
 #right-bottom-row {
 }
-
 /* search */
 #searchBar{
   width: auto;
@@ -92,10 +91,6 @@ body {
   font-family: FontAwesome;
   color: #2E6B42;
 }
-/* profile */
-/* menu */
-/* text input */
-
 /*message*/
 #message{
   resize: none;
@@ -225,7 +220,7 @@ Fonts bar:
    color: #186423;
    transform: scale(1.1);
 }
-#menu-place h1 {
+#menu-place h1:nth-of-type(1) {
   position: absolute;
   margin-top: 15px;
   margin-left: 25px;
@@ -234,7 +229,7 @@ Fonts bar:
   font-size: 20px;
   color: #186423;
 }
-/* стили модального окна */
+/*стиль */
 .content {
   top: -100%;
   left: 50%;
@@ -259,20 +254,229 @@ Fonts bar:
 .overlay:target+.content {
   transform: translate(-50%, 0);
   top: 10%;
-} 
-/* формируем кнопку close */
-.exit {
-  top: -68px;
-  right: -577px;
-  width: 10px;
-  height:40px;
+}
+/*стиль окна edit profile*/
+.content1 {
+  top: -100%;
+  left: 50%;
+  font-size: 14px;
+  z-index: 20;
+  width: 85%;
+  border: 1px solid #186423;
+  background: #BFE8BF;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 600px;
+  height: 230px;
+  position: fixed;
+  padding: 15px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  transform: translate(-50%, -500%);
+  transition: transform 0.6s ease-out;
+}
+.overlay:target+.content1 {
+  transform: translate(-50%, 0);
+  top: 10%;
+}
+.menu li .content1 h1:nth-of-type(1){
   position: absolute;
-  background-color: #808080;
-  box-shadow: 0px 0px 10px #000000;
+  top: 10px;
+  left: 200px;
+}
+.menu li .content1 h1:nth-of-type(2){
+  position: absolute;
+  top: 65px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: #186423;
+}
+.menu li .content1 h1:nth-of-type(3){
+  position: absolute;
+  top: 115px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: #186423;
+}
+.menu li .content1 h1:nth-of-type(4){
+  position: absolute;
+  top: 165px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: #186423;
+}
+.menu li .content1 #username{
+  position: absolute;
+  top: 60px;
+  left: 155px;
+}
+.menu li .content1 #birhday{
+  position: absolute;
+  top: 110px;
+  left: 155px;
+}
+.menu li .content1 #photo{
+  position: absolute;
+  top: 160px;
+  left: 155px;
+}
+.exit1 {
+  top: 170px;
+  right: -480px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+  background: #F9F0DA;
   transition: all ease .8s;
   border: 1px solid #186423;
   border-radius: 15px;
 }
+.exit1:before{
+  content: "Close";
+  font-size: 16px;
+}
+.exit1:hover {
+  transform: rotate(360deg);
+}
+/* стили окна очистить историю*/
+.content4 {
+  top: -100%;
+  left: 50%;
+  font-size: 14px;
+  z-index: 20;
+  width: 85%;
+  border: 1px solid #186423;
+  background: #BFE8BF;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 600px;
+  height: 220px;
+  position: fixed;
+  padding: 15px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  transform: translate(-50%, -500%);
+  transition: transform 0.6s ease-out;
+}
+.overlay:target+.content4 {
+  transform: translate(-50%, 0);
+  top: 10%;
+}
+.menu li .content4 h1{
+  position: absolute;
+  left: 70px;
+}
+.exit4 {
+  top: 160px;
+  right: -480px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+  background: #F9F0DA;
+  transition: all ease .8s;
+  border: 1px solid #186423;
+  border-radius: 15px;
+}
+.exit4:before{
+  content: "Close";
+  font-size: 16px;
+}
+.exit4:hover {
+  transform: rotate(360deg);
+}
+/* стили окна выхода*/
+.content6 {
+  top: -100%;
+  left: 50%;
+  font-size: 14px;
+  z-index: 10;
+  width: 85%;
+  border: 1px solid #186423;
+  background: #BFE8BF;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 600px;
+  height: 210px;
+  position: fixed;
+  padding: 15px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  transform: translate(-50%, -500%);
+  transition: transform 0.6s ease-out;
+}
+.overlay:target+.content6 {
+  transform: translate(-50%, 0);
+  top: 10%;
+}
+.menu li .content6 h1{
+  position: absolute;
+  left: 100px;
+}
+.exit6 {
+  top: 150px;
+  right: -480px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+  background: #F9F0DA;
+  transition: all ease .8s;
+  border: 1px solid #186423;
+  border-radius: 15px;
+}
+.exit6:before{
+  content: "Close";
+  font-size: 16px;
+}
+.exit6:hover {
+  transform: rotate(360deg);
+}
+/* формируем кнопку close */
+.exit {
+  top: 170px;
+  right: -480px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+  background: #F9F0DA;
+  transition: all ease .8s;
+  border: 1px solid #186423;
+  border-radius: 15px;
+}
+.exit:before{
+  content: "Close";
+  font-size: 16px;
+}
 .exit:hover {
   transform: rotate(360deg);
+}
+/*поля да & нет*/
+.yes{
+  position: absolute;
+  top:120px;
+  left: 150px;
+  border: 1px solid #186423;
+  border-radius: 15px;
+  width: 100px;
+  height: 40px;
+}
+.yes:hover{
+  background:#91D991;
+}
+.no{
+  position: absolute;
+  top:120px;
+  left: 300px;
+  border: 1px solid #186423;
+  border-radius: 15px;
+  width: 100px;
+  height: 40px;
+}
+.no:hover{
+  background:#91D991;
 }

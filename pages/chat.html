@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="logo.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript">
+  function showOrHide(bloggood, cat) {
+    bloggood = document.getElementById(bloggood);
+    cat = document.getElementById(cat);
+    if (bloggood.checked) cat.style.display = "block";
+    else cat.style.display = "none";
+  }
+  </script>
  </head>
  
 <body>
@@ -53,7 +61,8 @@
 				<h1>Profile photo:</h1>
 				<p><label for="name"><em></em></label><input type="text" id="username"></p>
 				<p><label for="date"><em></em></label><input type="date" id="birhday"></p>
-				<p><label for="file"><em></em></label><input type="file" id="photo"></p>
+				<p><label for="uploadbtn" class="uploadButton">Upload file</label>
+				<input style="opacity: 0;z-index: -1;" type="file" name="upload" id="uploadbtn"></p>
 			</div>
 		</li>
    		<li><a href="#bt2">Notifications</a>
@@ -81,10 +90,27 @@
 		</li>
    		<li><a href="#bt5">Settings</a>
 			<a href="#cl5" class="overlay" id="bt5"></a>
-			<div class="content">
-				Здесь5
-			<a class="exit" href="#exit"></a>
-			</div>
+			<div class="content5">
+				<a class="exit5" href="#exit"></a>
+				<h1>Settings</h1>
+				<h1>Old Password:</h1>
+				<h1>New password:</h1>
+				<h1>Repeat password:</h1>
+				<p><input type="password" maxlength="25" name="password1" class="pass1"></p>
+				<p><input type="password" maxlength="25" name="password2" class="pass2"></p>
+				<p><input type="password" maxlength="25" name="password3" class="pass3"></p>
+				<p><button type="button" class="change"></button></p>
+				<h1>E-mail:</h1>
+				<p><input type="email" class="email"></p>
+				<h1>Language:</h1>
+				<div class="language">
+ 					<div class="languagebtn">RU</div>
+  						<div class="language-content">
+  	  						<a href="#">RU</a>
+    							<a href="#">EN</a>
+  						</div>
+					</div>
+				</div>
 		</li>
    		<li><a href="#bt6">Exit</a>
 			<a href="#cl6" class="overlay" id="bt6"></a>

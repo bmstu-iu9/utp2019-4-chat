@@ -31,7 +31,7 @@ body {
   height: 100px;
 }
 #main {
-  background: #BFE8BF;
+  background:#F0FFF0;
   height: calc(100% - 220px);
   overflow-y: scroll;
 }
@@ -69,7 +69,7 @@ body {
   padding-left: 7px;
   border-radius: 42px;
   border: 2px solid #2E6B42;
-  background: #F9F0DA;
+  background: #F0FFF0;
   outline: none;
   position: relative;
   transition: .3s linear;
@@ -263,7 +263,7 @@ Fonts bar:
   z-index: 20;
   width: 85%;
   border: 1px solid #186423;
-  background: #BFE8BF;
+  background: #F0FFF0;
   border-radius: 20px;
   min-width: 320px;
   max-width: 600px;
@@ -332,17 +332,10 @@ Fonts bar:
   width: 90px;
   height:30px;
   position: absolute;
-  background: #F9F0DA;
-  transition: all ease .8s;
-  border: 1px solid #186423;
-  border-radius: 15px;
 }
 .exit1:before{
   content: "Close";
   font-size: 16px;
-}
-.exit1:hover {
-  transform: rotate(360deg);
 }
 /* стили окна очистить историю*/
 .content4 {
@@ -352,7 +345,7 @@ Fonts bar:
   z-index: 20;
   width: 85%;
   border: 1px solid #186423;
-  background: #BFE8BF;
+  background: #F0FFF0;
   border-radius: 20px;
   min-width: 320px;
   max-width: 600px;
@@ -378,17 +371,10 @@ Fonts bar:
   width: 90px;
   height:30px;
   position: absolute;
-  background: #F9F0DA;
-  transition: all ease .8s;
-  border: 1px solid #186423;
-  border-radius: 15px;
 }
 .exit4:before{
   content: "Close";
   font-size: 16px;
-}
-.exit4:hover {
-  transform: rotate(360deg);
 }
 /* стили окна выхода*/
 .content6 {
@@ -398,7 +384,7 @@ Fonts bar:
   z-index: 10;
   width: 85%;
   border: 1px solid #186423;
-  background: #BFE8BF;
+  background: #F0FFF0;
   border-radius: 20px;
   min-width: 320px;
   max-width: 600px;
@@ -424,17 +410,10 @@ Fonts bar:
   width: 90px;
   height:30px;
   position: absolute;
-  background: #F9F0DA;
-  transition: all ease .8s;
-  border: 1px solid #186423;
-  border-radius: 15px;
 }
 .exit6:before{
   content: "Close";
   font-size: 16px;
-}
-.exit6:hover {
-  transform: rotate(360deg);
 }
 /* формируем кнопку close */
 .exit {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!--links for googlefonts-->
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet"/>
+  <!--tab icon(favicon)-->
+  <link rel="shortcut icon" href="images/icon16.ico" /> <link rel="icon" href="images/icon16.ico" />
+  <!--tab title-->
+  <title>Search chat users
+  </title>
+  <!--scripts-->
+  <!--jquery; ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script>
+  <!-- css; bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <!--my script from the file with path-->
+  <script type="text/javascript" src="scripts/search.js">
+  </script> 
+  
+<!--css-->
+<style>
+  /*header icon chat*/
+  header 
+  {
+    display: block;
+	text-align:center;
+	padding-top: 20px;
+   }
+   /*search bar*/
+  #result 
+  {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   max-width:870px;
+   cursor: pointer;
+   overflow-y: auto;
+   max-height: 400px;
+   box-sizing: border-box;
+   z-index: 1001;
+  }
+	.link-class:hover
+  }
+  /*headings*/ 
+  h2 
+  {
+	font-family: 'Righteous', cursive;
+	font-weight:normal;
+	font-style:normal;
+	}
+  h3 
+  {
+	font-family: 'Cabin', sans-serif;
+  }
+  /*background*/
+  #background 
+  {
+   position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(images/dna.gif);
+    background-repeat: repeat;
+    background-position:center;
+    background-size: cover;
+	z-index:-1;
+  }
+  /*picture next to search bar*/
+  #users-pic
+  {
+   display:block;
+	float:left;
+  }
+  }
+</style>
+  
+</head>
+ 
+<body>
+  <!---background-->
+  <div id="background">
+  </div>
+  <header>
+  <!--main icon-->
+  <img src="images/chat.png" alt="chat"> 
+  </img>
+  </header>
+  <br /><br />
+  <!--main headings with icon-->
+  <div  class="container" style="width:900px;"align="center">
+  <h2 align="center">Search chat users</h2>
+  <div align="center">
+  <div id="texts" style="display:inline;"> 
+  <h3 color="#808080">👤 My contacts</h3>  
+  </div>
+  </div>
+  <br /><br />
+  <!--button search with acronym-->
+  <div class="search-bar">
+  <button id="bttn" type="submit"><acronym title="users">Search</acronym>
+  </button>
+  <br /><br />
+  </div>
+  <!--search bar -->
+  <div>
+  <input align="center" type="text" name="search" id="search" placeholder="🔍 Search users" class="form-control" />
+  </div>
+  <!--list of users from json-->
+  <ul class="list-group" id="result"></ul>
+  <br />
+  </div>
+  </body>
+</html>
+

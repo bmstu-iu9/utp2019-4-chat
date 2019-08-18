@@ -17,9 +17,9 @@ $(document).ready(function()
    {
 	   // statment for checking the username and email 
 	   // needs to be changed depending on the json file
-    if (value.username.search(expression) != -1 || value.email.search(expression) != -1)
+    if (value.name.search(expression) != -1 || value.birthday.search(expression) != -1)
     {
-     $('#result').append('<li class="list-group-item link-class">'+value.username+' | <span class="text-muted">'+value.email+'</span></li>');
+     $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /><span class="text-success"> '+value.name+'<span/> | <span class="text-muted">'+value.birthday+'</span></li>');
     }
 	// atributes for the waterfall list where the username stands 
    }

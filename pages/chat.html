@@ -4,54 +4,192 @@
  <head>
   <meta charset="utf-8">
   <title>Chat</title> 
-  <!-- </script> -->
-  <!-- <link rel="stylesheet" type="text/css" href="... path to file"> -->
-   
-  <style>
-  header {
-    display: block;
-    background: #A3EE63;
-   }
-   aside {
-    background: #EED663;
-    width: 25%;
-    float: right;
-   }
-   article  {
-   background: #63E8EE;
-    margin-right: 25%;
-   }
-   footer {
-    background: #A3EE63;
-   }
-  </style>
+  <link rel="stylesheet" type="text/css" href="chatstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
+  
+  
+  <!--scripts for search bar users-->
+  <!--jquery; ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script>
+  <!-- css; bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <!--my script from the file with path-->
+  <script type="text/javascript" src="scripts/search.js">
+  </script> 
+  <!--css-->
+  
+  
+  
+  
+  
+  <script type="text/javascript">
+  function showOrHide(bloggood, cat) {
+    bloggood = document.getElementById(bloggood);
+    cat = document.getElementById(cat);
+    if (bloggood.checked) cat.style.display = "block";
+    else cat.style.display = "none";
+  }
+  </script>
  </head>
  
- <body>
-  
-  <aside>
-  <header>
-  <p>Some buttons</p>
-  </header>
-  <p>Some edit informations</p>
-  </aside>
-  
-  <article>
-  <header>
-  <p>Some header</p>
-  </header>
-  <div id="main">Main</div>
-  <footer>
-  <!-- <form action="URL" onsubmit="send message to server and change Main"> -->
-  <p><input type="text" placeholder="Message" id="message" />
-  <button id="bttn" type="submit">Send</button></p>
-  <!-- </form> -->
-  </footer>
-  </article>
-  <script type="text/javascript" src="scripts/chat.js">
-  </script>
- </body>
+<body>
+	<div id="first-column">
+	</div>
+
+	<div id="left-column">
+		<header id="left-top-row">
+			<img src="logo.png" alt="Cham" id="logo-img">
+		        <img src="name.png" alt="Cham" id="name-img">
+			<form id="searchBar">
+				<input type="search" id="searchText" placeholder="Search..." />
+				<button type="submit" id="searchBtn"></button>
+			</form>
+		</header>
+		<div id="main-column"></div>
+		<div id="main"></div>
+		<footer id="left-bottom-row">
+		   	<label id="label">
+      					<i class="material-icons" id="icons">attach_file</i>
+      					<span class="title" id="title"></span>
+      		        		<input type="file" id="file"/>
+   		  	</label>
+		  	<button type="button" id="emodziBtn"></button>
+		  	<textarea id="message" placeholder="Message..." /></textarea>
+		  	<button type="submit" id="bttn"></button>
+	  	</footer>
+	</div>
+
+	<aside id="right-column">
+	<div id="right-top-row">
+	</div>
+	<div id="menu-place">
+	<h1>Username:</h1>
+	<ul class="menu">
+		<li><a href="#bt1">Edit profile</a>
+			<a href="#cl1" class="overlay" id="bt1"></a>
+			<div class="content1">
+				<p><a class="exit1" href="#exit"></a></p>
+				<h1>Edit profile</h1>
+				<h1>Username:</h1>
+				<h1>Birthday:</h1>
+				<h1>Profile photo:</h1>
+				<p><label for="name"><em></em></label><input type="text" id="username"></p>
+				<p><label for="date"><em></em></label><input type="date" id="birhday"></p>
+				<p><label for="uploadbtn" class="uploadButton">Upload file</label>
+				<input style="opacity: 0;z-index: -1;" type="file" name="upload" id="uploadbtn"></p>
+			</div>
+
+		</li>
+		
+		
+	<!--iva-->
+	<!--side button on the main page-->
+	<li>
+	<a href="#bt2"><acronym title="Cham users">Search Users</acronym></a>
+	<a href="#cl2" class="overlay" id="bt2"></a>
+	<!--window search-->
+	<div class="content">		
+	<div class="search-bar">
+    <br /><br />
+    </div>
+	<!--logo-->
+	<img src="logo.png" alt="Cham" id="logo-img">
+	<!--headings-->
+	<h2 align="center"><font face="Comic Sans MS" color="green" >Search CHAM users<font/></h2>
+	<div align="center">
+	<div id="texts" style="display:inline;"> 
+	<h3 color="#808080" >👤 World Wide Contacts</h3>  
+	</div>
+	</div>
+	<br /><br />
+    <!--search bar -->
+    <div >
+    <input align="center" type="text" name="search" id="search" placeholder="🔍 Search users" class="form-control" />
+    </div>
+    <!--list of users from json-->
+    <ul align= "center" class="list-group" id="result"></ul>
+    <br />
+	<!--close its possition needs to be changed-->
+	<p><a class="exit1" href="#exit"></a></p>
+	</div>
+	</li>
+		
+		
+		
+		
+		
+		
+   		<li><a href="#bt2">Notifications</a>
+			<a href="#cl2" class="overlay" id="bt2"></a>
+			<div class="content">
+				Здесь2
+			<a class="exit" href="#exit"></a>
+			</div>
+		</li>
+		<li><a href="#bt3">Attachments</a>
+			<a href="#cl3" class="overlay" id="bt3"></a>
+			<div class="content">
+				Здесь3
+			<a class="exit" href="#exit"></a>
+			</div>
+		</li>
+   		<li><a href="#bt4">Clear the story</a>
+			<a href="#cl4" class="overlay" id="bt4"></a>
+			<div class="content4">
+				<a class="exit4" href="#exit"></a>
+				<h1>Are you sure you want to clear the story?</h1>
+				<button class="yes">Yes</button>
+				<button class="no">No</button>
+			</div>
+		</li>
+   		<li><a href="#bt5">Settings</a>
+			<a href="#cl5" class="overlay" id="bt5"></a>
+			<div class="content5">
+				<a class="exit5" href="#exit"></a>
+				<h1>Settings</h1>
+				<h1>Old Password:</h1>
+				<h1>New password:</h1>
+				<h1>Repeat password:</h1>
+				<p><input type="password" maxlength="25" name="password1" class="pass1"></p>
+				<p><input type="password" maxlength="25" name="password2" class="pass2"></p>
+				<p><input type="password" maxlength="25" name="password3" class="pass3"></p>
+				<p><button type="button" class="change"></button></p>
+				<h1>E-mail:</h1>
+				<p><input type="email" class="email"></p>
+				<h1>Language:</h1>
+				<div class="language">
+ 					<div class="languagebtn">RU</div>
+  						<div class="language-content">
+  	  						<a href="#">RU</a>
+    							<a href="#">EN</a>
+  						</div>
+					</div>
+				</div>
+		</li>
+   		<li><a href="#bt6">Exit</a>
+			<a href="#cl6" class="overlay" id="bt6"></a>
+			<div class="content6">
+				<a class="exit6" href="#exit"></a>
+				<h1>Are you sure you want to go out?</h1>
+				<button class="yes">Yes</button>
+				<button class="no">No</button>
+			</div>
+		</li>
+	</ul>
+	</div>
+	<div id="right-bottom-row">
+	</div>
+	</aside>
+
+	<script type="text/javascript" src="scripts/chat.js">
+	</script>
+</body>
 </html>
 
 <!--  -->

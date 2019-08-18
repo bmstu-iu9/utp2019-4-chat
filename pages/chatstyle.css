@@ -254,6 +254,8 @@ Fonts bar:
   position: fixed;
   padding: 15px;
   font: 14px/18px 'Tahoma', Arial, sans-serif;
+  overflow: hidden;
+
 /* внешняя тень */
   box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
   transform: translate(-50%, -500%);
@@ -339,17 +341,28 @@ overflow:hidden;}
   height:30px;
   position: absolute;
 }
-.exitsearch {
-  top: -246px;
-  right: -480px;
-  width: 90px;
-  height:30px;
-  position: absolute;
-}
 .exit1:before{
   content: "Close";
   font-size: 16px;
 }
+.exit7{
+	top: 5px;
+    right: -476px;
+    width: 90px;
+    height: 30px;
+    position: absolute;  
+}
+.exit7:before{
+  content: "Close";
+  font-size: 16px;
+}
+.search-bar{
+    top: 30px;
+    height: 30px;
+    position: absolute;
+background-color: red;	
+}
+
 .uploadButton {
 	display: block;
   width: 120px;

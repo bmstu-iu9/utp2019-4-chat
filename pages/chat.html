@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="logo.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript">
   function showOrHide(bloggood, cat) {
     bloggood = document.getElementById(bloggood);
@@ -25,7 +26,14 @@
 	<div id="left-column">
 		<header id="left-top-row">
 			<img src="logo.png" alt="Cham" id="logo-img">
-		        <img src="name.png" alt="Cham" id="name-img">
+		    <img src="name.png" alt="Cham" id="name-img">
+			<div id="left-shape-upper">
+			  <div id="left-shape-circle"></div>
+			</div>
+			<div id="left-shape-lower"></div>
+			<div id="top-shape">
+			  <div id="top-shape-circle"></div>
+			</div>
 			<form id="searchBar">
 				<input type="search" id="searchText" placeholder="Search..." />
 				<button type="submit" id="searchBtn"></button>
@@ -47,6 +55,7 @@
 
 	<aside id="right-column">
 	<div id="right-top-row">
+	  <div id="right-shape"></div>
 	</div>
 	<div id="menu-place">
 	<h1>Username:</h1>

@@ -2,9 +2,9 @@
 body {background: #ADDFAD;}
 #simpForm {
   position: relative;
-  max-width: 400px;
-  margin: 60px  auto 0;
-  border-radius: 50px;
+  max-width: 600px;
+  margin: 90px  auto 0;
+  border-radius: 70px;
   background: white;
 }
 
@@ -59,40 +59,41 @@ body {background: #ADDFAD;}
 }
 #name-img{
   position: absolute;
-  width: 100px;
-  height: 40px;
-  bottom: -45px;
+  width: 150px;
+  height: 60px;
+  bottom: -65px;
   right: 10px;
 }
 
 /* main part */
 #inner-part {
-  padding: 50px;
+  padding: 70px;
 }
 #inner-part h1 {
   margin-top: 0;
   font-family: 'Сomic Sans MS', Cursive;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   color: #7D868C;
 }
 #inner-part h2 {
   margin-top: 0;
   font-family: 'Сomic Sans MS', Cursive; 
   font-weight: 500;
-  font-size: 14px;
+  font-size: 24px;
   color: #7D868C;
 }
 #inner-part input {
   display: block;
   width: 100%;
-  line-height: 37px;
+  line-height: 55px;
   padding: 0 20px;
   margin-bottom: 10px;
   border-width: 0;
-  border-radius: 20px;
+  border-radius: 30px;
   background: #E2EBF3;
   font-family: 'Сomic Sans MS', Cursive;
+  font-size: 18px;
 }
 #inner-part button {
   display: block;
@@ -100,14 +101,14 @@ body {background: #ADDFAD;}
   padding: 0 20px;
   margin-bottom: 10px;
   margin-left: 50%;
-  line-height: 40px;
+  line-height: 50px;
   border-width: 0;
-  border-radius: 20px;
+  border-radius: 30px;
   font-family: 'Сomic Sans MS', Cursive; 
   background: #50C878;
   border-bottom: 3px solid #3C9A5B;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 #inner-part button:hover {
   background: #50C878;

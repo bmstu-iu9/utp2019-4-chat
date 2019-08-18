@@ -142,6 +142,19 @@ body {
   top: 77px;
   left: 12px;
 }
+.logo-img-search{
+  position: absolute;
+  width: 75px;
+  height: 53px;
+     top: 165px;
+  left: 12px;
+}
+.users-img-search{
+position: absolute;
+    top: 119px;
+    left: 150px;
+	filter: sepia(100%) saturate(300%) brightness(150%) hue-rotate(80deg);
+}
 #name-img{
   position: absolute;
   width: 220px;

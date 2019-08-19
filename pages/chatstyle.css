@@ -193,6 +193,7 @@ body {
   background: var(--c-light-white);
   font-size: var(--text-size);
   overflow:  hidden;
+  resize: none;
 }
 #emodziBtn {
   width:0px;
@@ -241,17 +242,24 @@ body {
 /*logo*/
 #logo-img{
   position: absolute;
-  width: calc(var(--inside-top-row-el-height) * 1.5);
-  height: var(--inside-top-row-el-height);
-  top: calc(((var(--top-row-height) - var(--inside-top-row-el-height)) / 2) + 41px);
-  left: 10px;
+  width: 80px;
+  height: 60px;
+  top: calc(((var(--top-row-height) - var(--inside-top-row-el-height)) / 2) + 38px);
+  left: 4px;
 }
 #name-img{
   position: absolute;
-  width: calc(var(--inside-top-row-el-height) * 2.5);
-  height: var(--inside-top-row-el-height);
-  top: calc((var(--top-row-height) - var(--inside-top-row-el-height)) / 2);
-  left: calc(var(--inside-top-row-el-height) * 1.5);
+  width: 120px;
+  height: 60px;
+  top: calc((var(--top-row-height) - 60px) / 2);
+  left: calc(var(--inside-top-row-el-height) * 1.5 + 10px);
+}
+#logo-rev-img{
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  top: calc(var(--column-size) - 20px);
+  right: 20px;
 }
 /*
 Colors bar:

@@ -2,7 +2,7 @@
 body {background: #ADDFAD;}
 #simpForm {
   position: relative;
-  max-width: 600px;
+  max-width: 500px;
   margin: 90px  auto 0;
   border-radius: 70px;
   background: white;
@@ -80,7 +80,7 @@ body {background: #ADDFAD;}
   margin-top: 0;
   font-family: 'Сomic Sans MS', Cursive; 
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   color: #7D868C;
 }
 #inner-part input {

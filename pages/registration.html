@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="eu">
+
 <head>
-	<!-- <link rel="stylesheet" type="text/css" href="path to file"> -->
-	<meta charset="utf-8">
-	<title>Chat registration</title>
-</head>
+  <meta charset="utf-8">
+  <title>Chat registration</title> 
+  <link rel="stylesheet" type="text/css" href="simpleForm.css">
+  <link rel="shortcut icon" href="logo.png">
+ </head>
+ 
 <body>
-<h1 align="center">Please enter your details</h1>
-<div align="center">
-	<form onsubmit="registration(this)">
-		<p><input type="text" placeholder="Username" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required /></p>
-		<p><input type="password" placeholder="Password" id="password" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,64}$" required /></p>
-		<p><input type="email" placeholder="Email" id="email" required /></p>
-		<button type="submit">Registration</button>
+
+<form onsubmit="registration(this)" id="simpForm">
+	  <img src="logo.png" alt="Cham" id="logo-img"> 
+	  <img src="name.png" alt="Cham" id="name-img"> 
+	  <div id="left-shape"></div>
+	  <div id="right-shape"></div>
+	  <div id="add-circle"></div>
+	  <div id="inner-part">
+		<h1>Please enter your details</h1>
+		<input type="text" placeholder="Username" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required />
+		<input type="password" placeholder="Password" id="password" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,64}$" required />
+		<input type="email" placeholder="Email" id="email" required />
+		<button id="bttn" type="submit">Registration</button><Br>
+		<Br>
+		<h2>If you have an account:</h2>
+		<button id="logBttn" type="button">Login</button>
+	  </div>
 	</form>
-</div>
-<div align="center">
-	<p>If you have an account:<br><button id="logBttn" type="button">Login</button></p>
-</div>
+
 </body>
 <script type="text/javascript" src="scripts/registration.js"></script>
 </html>

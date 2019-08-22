@@ -328,6 +328,9 @@ Fonts bar:
    position: relative;
    border-radius: 40px;
 }
+.menu li a:first-child:focus{
+  outline:0;
+}
 .menu li a:first-child:hover {
    background: #BFE8BF; 
    color: var(--c-menu-text);
@@ -343,30 +346,124 @@ Fonts bar:
   color: var(--c-menu-text);
 }
 /*стиль */
-.content {
+.content3 {
   top: -100%;
   left: 50%;
   font-size: 14px;
   z-index: 20;
   width: 85%;
   border: 1px solid var(--c-menu-text);
-  background: #BFE8BF;
+  background: var(--c-light-white);
   border-radius: 20px;
   min-width: 320px;
   max-width: 600px;
-  height: 600px;
+  height: 450px;
   position: fixed;
   padding: 15px;
   font: 14px/18px 'Tahoma', Arial, sans-serif;
-/* внешняя тень */
   box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
   transform: translate(-50%, -500%);
   transition: transform 0.6s ease-out;
 }
-/* активируем блок */
-.overlay:target+.content {
+.overlay:target+.content3 {
   transform: translate(-50%, 0);
   top: 10%;
+}
+/* Базовый контейнер табов */
+.inserts {
+  top:90px;
+  position: absolute;
+}
+/* Стили секций с содержанием */
+.inserts>section {
+  display: none;
+  height: 240px;
+  width: 570px;
+  padding: 15px;
+  border-radius: 0 0 20px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.inserts>section>p {
+  margin: 0 0 5px;
+  line-height: 1.5;
+  color: #888;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/* Прячем чекбоксы */
+.inserts>input {
+  display: none;
+  position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.inserts>label:nth-of-type(1) {
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border:4px solid #ddd;
+  border-width: 1px 1px 1px 1px;
+  background: #f1f1f1;
+  border-radius: 20px 0px 0 0;
+  width: 120px;
+}
+.inserts>label:nth-of-type(2) {
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border:4px solid #ddd;
+  border-width: 1px 1px 1px 1px;
+  background: #f1f1f1;
+  border-radius: 0 0px 0 0;
+  width: 120px;
+}
+/* Изменения стиля переключателей вкладок при наведении */
+.inserts>label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* Стили для активной вкладки */
+.inserts>input:checked+label {	
+  color: var(--c-menu-text);
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+}
+/* Активация секций с помощью псевдокласса :checked */
+#insert1:checked~#content-insert1, #insert2:checked~#content-insert2 {
+  display: block;
+}
+/* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .inserts>label {
+    padding: 15px;
+  }
+}
+.exit3 {
+  top: 390px;
+  right: -475px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+}
+.exit3:before{
+  content: "Close";
+  font-size: 16px;
+}
+.menu li .content3 h1:nth-of-type(1){
+  position: absolute;
+  top: 10px;
+  left: 200px;
 }
 /*стиль окна edit profile*/
 .content1 {
@@ -380,7 +477,7 @@ Fonts bar:
   border-radius: 20px;
   min-width: 320px;
   max-width: 600px;
-  height: 230px;
+  height: 250px;
   position: fixed;
   padding: 15px;
   font: 14px/18px 'Tahoma', Arial, sans-serif;
@@ -399,7 +496,7 @@ Fonts bar:
 }
 .menu li .content1 h1:nth-of-type(2){
   position: absolute;
-  top: 65px;
+  top: 90px;
   font-size: 17px;
   left: 40px;
   font-family: 'Сomic Sans MS', Cursive;
@@ -408,7 +505,7 @@ Fonts bar:
 }
 .menu li .content1 h1:nth-of-type(3){
   position: absolute;
-  top: 115px;
+  top: 140px;
   font-size: 17px;
   left: 40px;
   font-family: 'Сomic Sans MS', Cursive;
@@ -417,7 +514,7 @@ Fonts bar:
 }
 .menu li .content1 h1:nth-of-type(4){
   position: absolute;
-  top: 165px;
+  top: 190px;
   font-size: 17px;
   left: 40px;
   font-family: 'Сomic Sans MS', Cursive;
@@ -426,17 +523,20 @@ Fonts bar:
 }
 .menu li .content1 #username{
   position: absolute;
-  top: 60px;
-  left: 155px;
+  top: 80px;
+  left: 175px;
+  width: 200px;
 }
 .menu li .content1 #birhday{
   position: absolute;
-  top: 110px;
-  left: 155px;
+  top: 130px;
+  left: 175px;
+  width: 200px;
+  padding-left: 40px;
 }
 .exit1 {
-  top: 170px;
-  right: -480px;
+  top: 189px;
+  right: -475px;
   width: 90px;
   height:30px;
   position: absolute;
@@ -447,19 +547,136 @@ Fonts bar:
 }
 .uploadButton {
 	display: block;
-  width: 120px;
-  height: 22px;
+  width: 200px;
+  height: 24px;
 	background: #fff;
 	color: #424242;
   border: 1px solid #9E9E9E;
-	font-size: 16px;
+	font-size: 15px;
 	font-family: Tahoma;
 	text-align: center;
 	border-radius:4px;
 	cursor: pointer;
   position: absolute;
-  top: 160px;
-  left: 156px;
+  top: 183px;
+  padding: 2px;
+  left: 176px;
+}
+/*стиль окна уведомления*/
+.content2 {
+  top: -100%;
+  left: 50%;
+  font-size: 14px;
+  z-index: 20;
+  width: 85%;
+  border: 1px solid var(--c-menu-text);
+  background: var(--c-light-white);
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 600px;
+  height: 250px;
+  position: fixed;
+  padding: 15px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
+  box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+  transform: translate(-50%, -500%);
+  transition: transform 0.6s ease-out;
+}
+.overlay:target+.content2 {
+  transform: translate(-50%, 0);
+  top: 10%;
+}
+.menu li .content2 h1:nth-of-type(1){
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+.menu li .content2 h1:nth-of-type(2){
+  position: absolute;
+  top: 90px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: var(--c-menu-text);
+}
+.menu li .content2 h1:nth-of-type(3){
+  position: absolute;
+  top: 140px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: var(--c-menu-text);
+}
+.menu li .content2 h1:nth-of-type(4){
+  position: absolute;
+  top: 190px;
+  font-size: 17px;
+  left: 40px;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  color: var(--c-menu-text);
+}
+.switch1 {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+.switch2 {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+.switch3 {
+  position: absolute;
+  top: 80%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0,0,0, .2);
+  transition: 0.5s;
+  position: relative;
+}
+input:checked[type="checkbox"] {
+  background: var(--c-green-3);
+}
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0, .2);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]::before {
+  left: 20px;
+}
+.exit2 {
+  top: 189px;
+  right: -475px;
+  width: 90px;
+  height:30px;
+  position: absolute;
+}
+.exit2:before{
+  content: "Close";
+  font-size: 16px;
 }
 /*стиль окна settings*/
 .content5 {
@@ -545,16 +762,31 @@ Fonts bar:
 }
 .change{
   position: absolute;
-  top: 230px;
+  top: 225px;
   left: 200px;
-  width: 100px;
-  height: 25px;
+  width: 90px;
+  height: 31px;
   content: "change";
   font-family: 'Сomic Sans MS', Cursive;
+  position: absolute;
+  border: 1px solid var(--c-menu-text);
+  border-radius: 15px;
 }
 .change:before{
   content: "Change";
-  font-size: 15px;
+  font-size: 14px;
+}
+.change:hover{
+  cursor: pointer;
+}
+.change:focus{
+  outline: 0;
+}
+.select{
+  font-family: 'Сomic Sans MS', Cursive;
+  position: absolute;
+  width: 90px;
+  height: 31px;
 }
 .menu li .content5 h1:nth-of-type(5){
   position: absolute;
@@ -581,42 +813,11 @@ Fonts bar:
 }
 .language {
   position: absolute;
-  top:360px;
+  top:355px;
   left: 200px;
+  font-size: 15px;
 }
-.language-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 140px;
-}
-.languagebtn{
-  cursor: pointer;
-  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-  padding-left: 25px;
-  width: 40px;
-}
-.languagebtn::after {
-    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
-    content: "";
-    height: 6px;
-    position: absolute;
-    right: 0;
-    top: 17px;
-    width: 16px;
-}
-.language-content a:last-child{
-  background: url('http://www.miru-mir.info/images/en.gif') no-repeat left center;
-}
-.language-content a {
-    color: black;
-    padding: 2px 0 2px 25px;
-    text-decoration: none;
-    display: block;
-}
-.language:hover .language-content {
-    display: block;
-}
+
 /* стили окна очистить историю*/
 .content4 {
   top: -100%;

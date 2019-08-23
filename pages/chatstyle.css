@@ -313,7 +313,7 @@ Fonts bar:
   list-style: none;
   width: 250px; 
   float: left;
-  margin-top: 90px;
+  margin-top: 40px;
   margin-left: 25px;
 }
 .menu li {
@@ -345,7 +345,7 @@ Fonts bar:
   font-family: 'Сomic Sans MS', Cursive;
   font-weight: 500;
   font-size: 20px;
-  color: var(--c-menu-text);
+  color: #186423;
 }
 /*стиль */
 .content3 {

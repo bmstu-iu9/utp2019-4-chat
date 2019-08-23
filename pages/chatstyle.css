@@ -1033,7 +1033,32 @@ input:checked[type="checkbox"]::before {
   font-weight: 500;
 }
 
-
+#user-img {
+  position: absolute;
+  right: calc((var(--column-size) - 230px) / 2);
+  top: calc((var(--column-size) - 230px) / 3);
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  box-shadow: 4px -5px 0 0 var(--c-light-white), -3px 5px 0 0 var(--c-dark-green);
+}
+#user-name-bar {
+  position: absolute;
+  background: var(--c-light-white);
+  opacity: 0.9;
+  min-width: 100px;
+  top: 210px;
+  right: 20px;
+  border-radius: 30px;
+  padding: 1px 15px 3px 8px;
+}
+#user-name {
+  font-size: 24px;
+}
+#user-name:before {
+  content: "#  ";
+  font-weight: 600;
+}
 
 
 

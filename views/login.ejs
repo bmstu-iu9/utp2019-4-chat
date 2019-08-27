@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+ <head>
+  <meta charset="utf-8">
+  <title>Chat login</title>
+ </head>
+
+ <body>
+  <h1 align="center">Please login</h1>
+  <div align="center">
+    <form action="/users/login" method="POST">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class = "form-control" placeholder="Enter Email">
+      </div>
+      <br>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class = "form-control" placeholder="Enter password">
+      </div>
+      <button type = "submit">Login</button>
+    </form>
+    <div align="center">
+        <p>
+            No Account? <a href="/users/register">Register</a>
+        </p>
+     </div>
+     </div>
+ </body>
+</html>
+
+

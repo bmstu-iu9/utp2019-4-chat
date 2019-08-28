@@ -1,0 +1,131 @@
+* {box-sizing: border-box;}
+body {background: #ADDFAD;}
+#simpForm {
+  position: relative;
+  max-width: 500px;
+  margin: 90px  auto 0;
+  border-radius: 70px;
+  background: white;
+}
+
+/* add shapes */
+#left-shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  bottom: 50px;
+  left: -20px;
+  content: "";
+  background: #ADDFAD;
+}
+#left-shape:before {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  bottom: 40px;
+  left: 0px;
+  content: "";
+  background: white;
+}
+#right-shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 60px;
+  right: -20px;
+  content: "";
+  background: #ADDFAD; 
+}
+#add-circle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  top: 71px;
+  right: -15px;
+  background: white;
+}
+
+/* images */
+#logo-img{
+  position: absolute;
+  width: 75px;
+  height: 60px;
+  top: -26px;
+  left: 25px;
+}
+#name-img{
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  bottom: -65px;
+  right: 10px;
+}
+
+/* main part */
+#inner-part {
+  padding: 70px;
+}
+#inner-part h1 {
+  margin-top: 0;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-weight: 500;
+  font-size: 30px;
+  color: #7D868C;
+}
+#inner-part h2 {
+  margin-top: 0;
+  font-family: 'Сomic Sans MS', Cursive; 
+  font-weight: 500;
+  font-size: 20px;
+  color: #7D868C;
+}
+#inner-part input {
+  display: block;
+  width: 100%;
+  line-height: 55px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  border-width: 0;
+  border-radius: 30px;
+  background: #E2EBF3;
+  font-family: 'Сomic Sans MS', Cursive;
+  font-size: 18px;
+}
+#inner-part button {
+  display: block;
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  margin-left: 50%;
+  line-height: 50px;
+  border-width: 0;
+  border-radius: 30px;
+  font-family: 'Сomic Sans MS', Cursive; 
+  background: #50C878;
+  border-bottom: 3px solid #3C9A5B;
+  color: white;
+  font-size: 18px;
+}
+#inner-part button:hover {
+  background: #50C878;
+  box-shadow: 0 5px 20px #50C878;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/*
+Colors bar:
+ADDFAD - light green
+50C878 - bright green
+3C9A5B - shadow bright green
+7D868C - text color
+E2EBF3 - input place color
++ white
+
+Fonts bar:
+'Сomic Sans MS', Cursive (14/24) - h
+*/

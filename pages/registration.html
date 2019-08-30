@@ -4,31 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>Chat registration</title> 
-  <link rel="stylesheet" type="text/css" href="simpleForm.css">
-  <link rel="shortcut icon" href="logo.png">
+  <link rel="stylesheet" type="text/css" href="../public/css/simpleForm.css">
+  <link rel="shortcut icon" href="../public/logo.png">
  </head>
  
 <body>
 
-<form onsubmit="registration(this)" id="simpForm">
-	  <img src="logo.png" alt="Cham" id="logo-img"> 
-	  <img src="name.png" alt="Cham" id="name-img"> 
+<form action="/users/register" method="POST" id="simpForm">
+	  <img src="../public/logo.png" alt="Cham" id="logo-img"> 
+	  <img src="../public/name.png" alt="Cham" id="name-img"> 
 	  <div id="left-shape"></div>
 	  <div id="right-shape"></div>
 	  <div id="add-circle"></div>
 	  <div id="inner-part">
 		<h1>Please enter your details</h1>
-		<input type="text" placeholder="Username" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required />
-		<input type="password" placeholder="Password" id="password" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,64}$" required />
-		<input type="password" placeholder="Please repeat password" id="repeat" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,64}$" required />
-		<input type="email" placeholder="Email" id="email" required />
+		<input type="text" placeholder="Username" name = "name" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required />
+		<input type="password" placeholder="Password" name = "password" id="password"/>
+		<input type="password" placeholder="Please repeat password" name = "password2" id="repeat" required />
+		<input type="email" placeholder="Email" id="email" name = "email"pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required />
 		<button id="bttn" type="submit">Registration</button><Br>
 		<Br>
 		<h2>If you have an account:</h2>
-		<button id="logBttn" type="button">Login</button>
+		<a href="/users/login"><button id="logBttn" type="button">Login</button></a>
 	  </div>
 	</form>
 
 </body>
-<script type="text/javascript" src="scripts/registration.js"></script>
+<script type="text/javascript" src="../public/scripts/registration.js"></script>
 </html>

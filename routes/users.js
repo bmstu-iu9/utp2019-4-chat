@@ -5,7 +5,7 @@ const path = require('path');
 const passport = require('passport');
 // Load User model
 const User = require('../models/User');
-const { forwardAuthenticated } = require('../../../../Desktop/utp2019-4-chat-master-2/config/auth');
+const { forwardAuthenticated } = require(__dirname + '/../config/auth');
 
 // Login Page
 router.get('/login', forwardAuthenticated, (req, res) => res.sendFile(path.join(__dirname, '../pages/login.html')));

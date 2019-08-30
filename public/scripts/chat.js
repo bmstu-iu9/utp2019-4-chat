@@ -15,6 +15,15 @@ bttn.onclick = () => {
 		messageText.setAttribute("id", "m-text");
 		messageText.innerText = text;
 		newMessage.appendChild(messageText);
+		
+		let blockUsernameMessage = document.createElement("footer");
+		
+		let usernameMessage = document.createElement("p");
+		usernameMessage.setAttribute("id", "m-name");
+		usernameMessage.innerHTML = "My username";
+		blockUsernameMessage.appendChild(usernameMessage);
+		newMessage.appendChild(blockUsernameMessage);
+		
 		message.value = "";
 		document.getElementById("main").appendChild(newMessage);
 	}

@@ -15,6 +15,7 @@
 <div id="first-column">
 	<div id="search-new-chat">
 		<input type="search" id="searchChat" placeholder="Chat search" />
+		<button type="button" id="searchChatBtn"></button>
 	</div>
 	<div id="choice-chat">
 		<button type="button" id="now-chat">Now chat</button>
@@ -109,7 +110,7 @@
 			<input type="file" id="file"/>
 		</label>
 		<button type="button" id="emodziBtn"></button>
-		<textarea id="message" placeholder="Message..."></textarea>
+		<textarea id="message" placeholder="Message..." onkeydown="changeEnter()"></textarea>
 		<button type="submit" id="bttn"></button>
 	</footer>
 </div>
@@ -242,6 +243,12 @@
 
 <script type="text/javascript" src="../public/scripts/chat.js">
 </script>
+<script>
+	changeEnter = () => {	
+		if (window.event.keyCode == 13) {
+			bttn.click();
+		}
+	}
+</script>
 </body>
 </html>
-

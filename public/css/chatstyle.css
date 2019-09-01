@@ -1089,6 +1089,22 @@ input:checked[type="checkbox"]::before {
   font-size: var(--text-size);
   outline: none;
 }
+#searchChatBtn {
+  width: var(--inside-top-row-el-height);
+  height: var(--inside-top-row-el-height);
+  background: none;
+  border: none;
+  position: absolute;
+  cursor:pointer;
+  top: calc(var(--top-row-height) + 5px);
+  right: 15px;
+}
+#searchChatBtn:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: var(--text-size);
+  color: var(--c-icons);
+}
 #choice-chat {
   position: absolute;
   width: 275px;
@@ -1114,6 +1130,7 @@ input:checked[type="checkbox"]::before {
   top: 20px;
   left: calc((100% - 210px) / 2);
   margin: 5px 0px;
+  cursor:pointer;
 }
 #another-chat {
   position: relative;
@@ -1128,6 +1145,7 @@ input:checked[type="checkbox"]::before {
   top: 20px;
   left: calc((100% - 210px) / 2);
   margin: 5px 0px;
+  cursor:pointer;
 }
 #another-chat:hover {
   color: var(--c-light-white);

@@ -1,4 +1,4 @@
- /* general */
+/* general */
  * {
   margin: 0;
   padding: 0;
@@ -60,7 +60,15 @@ body {
   overflow-y: scroll;
   padding: 50px 30px 30px 50px;
   border-top-left-radius: 50px;
-  border-bottom-left-radius:50px;
+}
+#scrol-space{
+  position: absolute;
+  width: calc(var(--shapes-size) / 2);
+  height: calc(100% - var(--top-row-height) - var(--bottom-row-height));
+  content: "";
+  background: var(--c-light-white);
+  right: 0px;
+  bottom: var(--bottom-row-height);
 }
 #left-bottom-row {
   background: var(--c-green-1);
@@ -86,14 +94,22 @@ body {
 #right-bottom-row {	
 }
 /* add shapes */
-/*top left right bottom*/
+#left-shape {
+  position: absolute;
+  width: calc(var(--shapes-size) / 2);
+  height: calc(100% - var(--top-row-height) - var(--bottom-row-height) - 70px);
+  content: "";
+  background: var(--c-green-3);
+  left: calc(0px - (var(--shapes-size) / 2));
+  top: 150px;
+}
 #left-shape-upper {
   position: absolute;
   width: var(--shapes-size);
   height: var(--shapes-size);
   border-radius: calc(var(--shapes-size) / 2);
   content: "";
-  background: var(--c-green-1);
+  background: var(--c-green-3);
   left: calc(0px - (var(--shapes-size) / 2));
   bottom: calc(250px + var(--shapes-size));
 }
@@ -114,7 +130,7 @@ body {
   border-radius: calc(var(--shapes-circle-size) / 2);
   background: var(--c-light-white);
   top: calc((var(--shapes-size) - var(--shapes-circle-size)) / 2);
-  right: calc(var(--shapes-circle-size) * 1.5);
+  right: calc(var(--shapes-circle-size));
 }
 #top-shape {
   position: absolute;
@@ -133,7 +149,7 @@ body {
   border-radius: calc(var(--shapes-circle-size) / 2);
   background: var(--c-green-1);
   left: calc((var(--shapes-size) - var(--shapes-circle-size)) / 2);
-  top: calc(var(--shapes-circle-size) * 1.2);
+  top: calc(var(--shapes-circle-size));
 }
 #right-shape {
   position: absolute;
@@ -271,7 +287,6 @@ ADDFAD - light green
 7D868C - text color
 E2EBF3 - input place color
 + white
-
 Fonts bar:
 'Сomic Sans MS', Cursive (14/24) - h
 */
@@ -954,7 +969,6 @@ input:checked[type="checkbox"]::before {
 }
 @media screen and (max-width:999px) and (max-height:549px) {
 }
-
 */
 
 
@@ -1062,20 +1076,59 @@ input:checked[type="checkbox"]::before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#searchChat {
+  position: relative;
+  top: calc(var(--top-row-height) + 5px);
+  width: 250px;
+  left: calc(((var(--column-size) - 250px) / 2) + 10px);
+  height: var(--inside-top-row-el-height);
+  padding-left: var(--text-size);
+  border-radius: var(--inside-top-row-el-height);
+  border: 2px solid var(--c-icons);
+  background: var(--c-light-white);
+  font-size: var(--text-size);
+  outline: none;
+}
+#choice-chat {
+  position: absolute;
+  width: 275px;
+  height: calc(100% - var(--top-row-height) - var(--bottom-row-height) - 70px);
+  top: 150px;
+  left: calc((var(--column-size) - 250px) / 2);
+  border-radius: var(--inside-top-row-el-height);
+  background: var(--c-green-3);
+  outline: none;
+  overflow-y: scroll;
+}
+#now-chat {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background: var(--c-green-2);
+  color: var(--c-text);
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  top: 20px;
+  left: calc((100% - 210px) / 2);
+  margin: 5px 0px;
+}
+#another-chat {
+  position: relative;
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background: var(--c-green-2);
+  color: var(--c-text);
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  top: 20px;
+  left: calc((100% - 210px) / 2);
+  margin: 5px 0px;
+}
+#another-chat:hover {
+  color: var(--c-light-white);
+}

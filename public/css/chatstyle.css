@@ -97,11 +97,11 @@ body {
 #left-shape {
   position: absolute;
   width: calc(var(--shapes-size) / 2);
-  height: 853px;
+  height: calc(100% - var(--top-row-height) - var(--bottom-row-height) - 70px);
   content: "";
   background: var(--c-green-3);
   left: calc(0px - (var(--shapes-size) / 2));
-  bottom: 100px;
+  top: 150px;
 }
 #left-shape-upper {
   position: absolute;
@@ -1094,7 +1094,7 @@ input:checked[type="checkbox"]::before {
 #choice-chat {
   position: absolute;
   width: 275px;
-  height: calc(100% - 250px);
+  height: calc(100% - var(--top-row-height) - var(--bottom-row-height) - 70px);
   top: 150px;
   left: calc((var(--column-size) - 250px) / 2);
   border-radius: var(--inside-top-row-el-height);

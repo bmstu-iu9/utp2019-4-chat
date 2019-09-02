@@ -19,8 +19,8 @@
 	  <div id="inner-part">
 		<h1>Please enter your details</h1>
 		<input type="text" placeholder="Username" name = "name" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required />
-		<input type="password" placeholder="Password" name = "password" id="password"/>
-		<input type="password" placeholder="Please repeat password" name = "password2" id="repeat" required />
+		<input type="password" placeholder="Password" name = "password" id="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}" title="Пароль должен содержать минимум 1 цифру, 1 латинскую букву в верхнем и 1 в нижнем регистре и длина пароля должна быть больше или равна 6." required />
+		<input type="password" placeholder="Please repeat password" name = "password2" id="repeat" onblur="changePassword()" title="Пароли не совпадают." required />
 		<input type="email" placeholder="Email" id="email" name = "email"pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required />
 		<button id="bttn" type="submit">Registration</button><Br>
 		<Br>
@@ -31,4 +31,15 @@
 
 </body>
 <script type="text/javascript" src="../public/scripts/registration.js"></script>
+<script>
+	changePassword = () => {
+		if (password.value != repeat.value) {
+			repeat.title = "Пароли не совпадают"
+			repeat.value = "";
+		}
+		else {
+			repeat.title = "Пароли совпадают";
+		}
+	}
+</script>
 </html>

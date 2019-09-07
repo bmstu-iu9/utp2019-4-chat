@@ -109,12 +109,17 @@ body {background: #ADDFAD;}
   border-bottom: 3px solid #3C9A5B;
   color: white;
   font-size: 18px;
+  text-decoration: none;
 }
 #inner-part button:hover {
   background: #50C878;
   box-shadow: 0 5px 20px #50C878;
   color: white;
   transform: translateY(-3px);
+  text-decoration: none;
+}
+a{
+  text-decoration:none;
 }
 
 /*

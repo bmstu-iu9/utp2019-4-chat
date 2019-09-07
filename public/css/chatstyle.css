@@ -151,6 +151,66 @@ body {
   left: calc((var(--shapes-size) - var(--shapes-circle-size)) / 2);
   top: calc(var(--shapes-circle-size));
 }
+
+
+#top-circle-big{
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: 12px;
+  left: 700px;
+}
+#top-circle-middle{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: 22px;
+  left: 100px;
+}
+#top-circle-middle2{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: -1px;
+  right: 140px;
+}
+#top-circle-small-1{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: 32px;
+  left: -60px;
+}
+#top-circle-small-2{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: -4px;
+  left: 62px;
+}
+#top-circle-small-3{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--c-light-white);
+  top: 40px;
+  left: 180px;
+}
+
+
+
+
 #right-shape {
   position: absolute;
   width: var(--shapes-size);
@@ -189,8 +249,9 @@ body {
   background: none;
   border: none;
   position: absolute;
-  right: calc(var(--inside-top-row-el-height) / 3);
   cursor:pointer;
+  top: 15px;
+  right: 20px;
 }
 #searchBtn:before {
   content: "\f002";
@@ -212,6 +273,7 @@ body {
   font-size: var(--text-size);
   overflow:  hidden;
   resize: none;
+  word-wrap: break-word;
 }
 #emodziBtn {
   width:0px;
@@ -998,6 +1060,7 @@ input:checked[type="checkbox"]::before {
   position: relative;
   font-size: 20px;
   margin: 0 0 16px;
+  word-wrap: break-word;
 }
 #s-name {
   position: absolute;
@@ -1035,6 +1098,7 @@ input:checked[type="checkbox"]::before {
   position: relative;
   font-size: 20px;
   margin: 0 0 16px;
+  word-wrap: break-word;
 }
 #m-name {
   position: absolute;

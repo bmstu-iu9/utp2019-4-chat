@@ -1,27 +1,35 @@
 {
-    "name": "chat",
-    "version": "2.0.0",
-    "description": "Node.js authentication with Passport",
-    "main": "server.js",
-    "scripts": {
-      "start": "node app.js",
-      "dev": "nodemon app.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "bcryptjs": "^2.4.3",
-      "connect-flash": "^0.1.1",
-      "ejs": "^2.7.1",
-      "express": "^4.17.1",
-      "express-ejs-layouts": "^2.5.0",
-      "express-session": "^1.16.2",
-      "mongoose": "^5.6.11",
-      "passport": "^0.4.0",
-      "passport-local": "^1.0.0"
-    },
-    "devDependencies": {
-      "nodemon": "^1.19.1"
-    }
+  "name": "chat",
+  "version": "2.0.0",
+  "description": "Node.js authentication with Passport",
+  "main": "server.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "NikitaLobaev",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmstu-iu9/utp2019-4-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmstu-iu9/utp2019-4-chat/issues"
+  },
+  "homepage": "https://github.com/bmstu-iu9/utp2019-4-chat#readme"
 }

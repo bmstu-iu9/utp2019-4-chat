@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="eu">
-
- <head>
-  <meta charset="utf-8">
-  <title>Chat login</title> 
-  <link rel="stylesheet" type="text/css" href="../public/css/simpleForm.css">
-  <link rel="shortcut icon" href="../public/logo.png">
- </head>
- 
- <body>
-  <form action="/users/login" method="POST" id="simpForm">
-	  <img src="../public/logo.png" alt="Cham" id="logo-img"> 
-	  <img src="../public/name.png" alt="Cham" id="name-img"> 
-	  <div id="left-shape"></div>
-	  <div id="right-shape"></div>
-	  <div id="add-circle"></div>
-	  <div id="inner-part">
+<head>
+	<meta charset="utf-8">
+	<title>Chat login</title>
+	<link href="css/simpleForm.css" rel="stylesheet" type="text/css">
+	<link href="images/logo.png" rel="shortcut icon">
+</head>
+<body>
+<div class="form">
+	<img alt="Cham" class="logo" src="images/logo.png" />
+	<img alt="Cham" class="name" src="images/name.png" />
+	<div class="left-shape"></div>
+	<div class="right-shape"></div>
+	<div class="add-circle"></div>
+	<div class="inner-part">
 		<h1>Please login</h1>
-		<input type="text" id="userName" name = "email"placeholder="Email" required />
-		<input type="password" id="password" name = "password"placeholder="Password" required />
-		<button type="submit" id="buttonLogin">Login</button>
-		<Br>
+		<form action="login" method="post">
+			<input name="email" placeholder="Email" required type="email" />
+			<input name="password" placeholder="Password" pattern="^\w{6,20}$" required type="password" />
+			<button type="submit">Login</button>
+		</form>
+		<br />
 		<h2>If you don't have an account:</h2>
-		<a href="/users/register"><button type="button" id="buttonRegistration">Registration</button></a>
-		
-	  </div>
-	</form>
-   
-   <script type="text/javascript" src="../public/scripts/login.js">
-   </script>
-   
- </body>
+		<button id="buttonRegistration">Registration</button>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="scripts/login.js"></script>
 </html>

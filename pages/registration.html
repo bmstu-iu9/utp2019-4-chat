@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="eu">
-
 <head>
-  <meta charset="utf-8">
-  <title>Chat registration</title> 
-  <link rel="stylesheet" type="text/css" href="../public/css/simpleForm.css">
-  <link rel="shortcut icon" href="../public/logo.png">
- </head>
- 
+	<meta charset="utf-8">
+	<title>Chat registration</title>
+	<link href="css/simpleForm.css" rel="stylesheet" type="text/css">
+	<link href="images/logo.png" rel="shortcut icon">
+</head>
 <body>
-
-<form action="/users/register" method="POST" id="simpForm">
-	  <img src="../public/logo.png" alt="Cham" id="logo-img"> 
-	  <img src="../public/name.png" alt="Cham" id="name-img"> 
-	  <div id="left-shape"></div>
-	  <div id="right-shape"></div>
-	  <div id="add-circle"></div>
-	  <div id="inner-part">
+<div class="form">
+	<img alt="Cham" class="logo" src="images/logo.png" />
+	<img alt="Cham" class="name" src="images/name.png" />
+	<div class="left-shape"></div>
+	<div class="right-shape"></div>
+	<div class="add-circle"></div>
+	<div class="inner-part">
 		<h1>Please enter your details</h1>
-		<input type="text" placeholder="Username" name = "name" id="userName" pattern="^[a-zA-Z]\w*[a-zA-Z]\w*[a-zA-Z]\w*$" required />
-		<input type="password" placeholder="Password" name = "password" id="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}" title="Пароль должен содержать минимум 1 цифру, 1 латинскую букву в верхнем и 1 в нижнем регистре и длина пароля должна быть больше или равна 6." required />
-		<input type="password" placeholder="Please repeat password" name = "password2" id="repeat" onblur="changePassword()" title="Пароли не совпадают." required />
-		<input type="email" placeholder="Email" id="email" name = "email"pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required />
-		<button id="bttn" type="submit">Registration</button><Br>
-		<Br>
+		<form action="registration" method="post">
+			<input name="nick" pattern="^\w{6,20}$" placeholder="Username" required type="text" />
+			<input name="password1" id="password1" pattern="^\w{6,20}$" placeholder="Password" required type="password" />
+			<input name="password2" id="password2" pattern="^\w{6,20}$" placeholder="Please repeat password" required title="Пароли не совпадают." type="password" />
+			<input name="email" placeholder="Email" required type="email" />
+			<button type="submit">Registration</button>
+		</form>
+		<br />
 		<h2>If you have an account:</h2>
-		<a href="/users/login"><button id="logBttn" type="button">Login</button></a>
-	  </div>
-	</form>
-
+		<button id="buttonLogin">Login</button>
+	</div>
+</div>
 </body>
-<script type="text/javascript" src="../public/scripts/registration.js"></script>
-<script>
-	changePassword = () => {
-		if (password.value != repeat.value) {
-			repeat.title = "Пароли не совпадают"
-			repeat.value = "";
-		}
-		else {
-			repeat.title = "Пароли совпадают";
-		}
-	}
-</script>
+<script type="text/javascript" src="scripts/registration.js"></script>
 </html>

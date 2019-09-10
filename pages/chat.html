@@ -1,254 +1,173 @@
 <!DOCTYPE html>
 <html lang="eu">
-
 <head>
 	<meta charset="utf-8">
 	<title>Chat</title>
-	<link rel="stylesheet" type="text/css" href="../public/css/chatstyle.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="../public/logo.png">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/chatstyle.css" rel="stylesheet">
+	<link href="images/logo.png" rel="shortcut icon">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<script src="socket.io/socket.io.js"></script>
 </head>
-
 <body>
-<div id="first-column">
-	<div id="search-new-chat">
-		<input type="search" id="searchChat" placeholder="Chat search" />
-		<button type="button" id="searchChatBtn"></button>
-	</div>
-	<div id="choice-chat">
-		<button type="button" id="now-chat">Now chat</button>
-		<button type="button" id="another-chat">Another chat</button>
+<div class="search-chat">
+	<form id="searchChatForm">
+		<input class="email" name="email" placeholder="User search @ (by email)" required type="email" />
+		<button class="submit" type="submit"></button>
+	</form>
+	<div class="choice" id="searchChatChoiceButtons">
+		<button class="current" data-room="" id="searchChatChoiceSandbox" onclick="selectRoom(this)">Sandbox</button>
 	</div>
 </div>
-
-<div id="left-column">
-	<header id="left-top-row">
-		<img src="../public/logo.png" alt="Cham" id="logo-img">
-		<img src="../public/name.png" alt="Cham" id="name-img">
-		<div id="left-shape"></div>
-		<div id="left-shape-upper">
-			<div id="left-shape-circle"></div>
+<div class="center">
+	<header class="header">
+		<img alt="Cham" class="logo" src="images/logo.png" />
+		<img alt="Cham" class="name" src="images/name.png" />
+		<div class="left-shape"></div>
+		<div class="left-shape-upper">
+			<div class="circle"></div>
 		</div>
-		<div id="left-shape-lower"></div>
-		<div id="top-shape">
-			<div id="top-shape-circle"></div>
+		<div class="left-shape-lower"></div>
+		<div class="top-shape">
+			<div id="circle"></div>
 		</div>
-		<form id="searchBar">
-			<input type="search" id="searchText" placeholder="Search..." />
-			<button type="submit" id="searchBtn"></button>
+		<form class="form" id="searchMessagesForm">
+			<input class="text" name="text" placeholder="Search..." required type="search" />
+			<button class="submit" type="submit"></button>
 		</form>
 	</header>
-	
-	<div id="main">
-		
-		<!--<div id="someone-message-box">
-			<img src="../public/usericon1.jpg" alt="" id="s-img">
-			<p id="s-text">Message example from someone</p>
-			<footer><p id="s-name">Someone username</p></footer>
-		</div>
-		<div id="my-message-box">
-			<img src="../public/usericon2.jpg" alt="" id="m-img">
-			<p id="m-text">My message example. It will be long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.</p>
-			<footer><p id="m-name">My username</p></footer>
-		</div>
-		<div id="someone-message-box">
-			<img src="../public/usericon1.jpg" alt="" id="s-img">
-			<p id="s-text">Message example from someone. It will be long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.</p>
-			<footer><p id="s-name">Someone username</p></footer>
-		</div>
-		<div id="my-message-box">
-			<img src="../public/usericon2.jpg" alt="" id="m-img">
-			<p id="m-text">My message example.</p>
-			<footer><p id="m-name">My username</p></footer>
-		</div>
-		<div id="someone-message-box">
-			<img src="../public/usericon1.jpg" alt="" id="s-img">
-			<p id="s-text">Message example from someone</p>
-			<footer><p id="s-name">Someone username</p></footer>
-		</div>
-		<div id="my-message-box">
-			<img src="../public/usericon2.jpg" alt="" id="m-img">
-			<p id="m-text">My message example. It will be long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.</p>
-			<footer><p id="m-name">My username</p></footer>
-		</div>
-		<div id="someone-message-box">
-			<img src="../public/usericon1.jpg" alt="" id="s-img">
-			<p id="s-text">Message example from someone. It will be long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.
-				Very very long. Very very long. Very very long. Very very long. Very very long.</p>
-			<footer><p id="s-name">Someone username</p></footer>
-		</div>
-		<div id="my-message-box">
-			<img src="../public/usericon2.jpg" alt="" id="m-img">
-			<p id="m-text">My message example.</p>
-			<footer><p id="m-name">My username</p></footer>
-		</div>-->
-		
-		<div id="scrol-space"></div>
-	</div>
-	
-	<footer id="left-bottom-row">
-		<label id="label">
-			<i class="material-icons" id="icons">attach_file</i>
-			<span class="title" id="title"></span>
-			<input type="file" id="file"/>
-		</label>
-		<button type="button" id="emodziBtn"></button>
-		<textarea id="message" placeholder="Message..." onkeydown="changeEnter()"></textarea>
-		<button type="submit" id="bttn"></button>
+	<div class="main" id="chatArea"></div>
+	<footer class="footer">
+		<form id="messageForm">
+			<!--<label class="label">
+				<i class="material-icons">attach_file</i>
+				<span class="title"></span>
+				<input type="file" />
+			</label>
+			<button class="emodziBtn"></button>-->
+			<input class="message" name="message" placeholder="Message..." required type="text" />
+			<button class="submit" type="submit"></button>
+		</form>
 	</footer>
 </div>
-
-<aside id="right-column">
-	<div id="right-top-row">
-		<div id="right-shape"></div>
-		<img src="../public/usericon2.jpg" alt="" id="user-img">
-		<div id="user-name-bar">
-			<p id="user-name">My username</p>
+<aside class="menu">
+	<div class="top-row">
+		<div class="right-shape"></div>
+		<img class="avatar" id="avatar" />
+		<div class="nick-bar">
+			<p class="nick" id="nick"></p>
 		</div>
-		<img src="../public/logo-rev.png" alt="Cham" id="logo-rev-img">
+		<img alt="Cham" class="logo-rev" src="images/logo-rev.png" />
 	</div>
-	<div id="menu-place">
-		<ul class="menu">
-			<li><a href="#bt1">Edit profile</a>
-				<a href="#cl1" class="overlay" id="bt1"></a>
+	<div class="buttons">
+		<ul>
+			<li>
+				<a href="#bt1">Edit profile</a>
+				<a class="overlay" href="#cl1" id="bt1"></a>
 				<div class="content1">
-					<p><a class="exit1" href="#exit"></a></p>
+					<p><a class="exit" href="#"></a></p>
 					<h1>Edit profile</h1>
-					<h1>Username:</h1>
-					<h1>Birthday:</h1>
+					<h1>Nick:</h1>
+					<h1></h1>
 					<h1>Profile photo:</h1>
-					<p><label for="name"><em></em></label><input type="text" id="username"></p>
-					<p><label for="date"><em></em></label><input type="date" id="birhday"></p>
-					<p><label for="uploadbtn" class="uploadButton">Upload file</label>
-						<input style="opacity: 0;z-index: -1;" type="file" name="upload" id="uploadbtn"></p>
+					<form id="editProfileNickForm">
+						<p><label for="nick"><em></em></label><input class="nick" id="editProfileNick" name="nick" title="Type ENTER to submit" type="text" /></p>
+					</form>
+					<p>
+						<label class="button" for="editProfileAvatar">Upload file</label>
+						<input accept="image/jpeg" class="file" id="editProfileAvatar" name="avatar" type="file" />
+					</p>
 				</div>
 			</li>
-			<li><a href="#bt2">Notifications</a>
-				<a href="#cl2" class="overlay" id="bt2"></a>
+			<li>
+				<a href="#bt2">Notifications</a>
+				<a class="overlay" href="#cl2" id="bt2"></a>
 				<div class="content2">
-					<a class="exit2" href="#exit"></a>
+					<a class="exit" href="#"></a>
 					<h1>Notifications</h1>
 					<h1>Receive notifications with sound:</h1>
-					<div class="switch1">
-						<input type="checkbox">
+					<div class="switch">
+						<input id="notificationsCheckbox" type="checkbox" />
 					</div>
-					<h1>Receive chat room birthdays reminders:</h1>
+					<!--<h1>Receive chat room birthdays reminders:</h1>
 					<div class="switch2">
 						<input type="checkbox">
 					</div>
 					<h1>Receive Email notifications:</h1>
 					<div class="switch3">
 						<input type="checkbox">
-					</div>
+					</div>-->
 				</div>
 			</li>
-			<li><a href="#bt3">Attachments</a>
-				<a href="#cl3" class="overlay" id="bt3"></a>
+			<!--<li>
+				<a href="#bt3">Attachments</a>
+				<a class="overlay" href="#cl3" id="bt3"></a>
 				<div class="content3">
-					<a class="exit3" href="#exit"></a>
+					<a class="exit3" href="#"></a>
 					<h1>Attachments</h1>
 					<div class="inserts">
-						<input id="insert1" type="radio" name="inserts" checked>
+						<input id="insert1" type="radio" name="inserts" checked />
 						<label for="insert1" title="Documents">Documents</label>
-						
-						<input id="insert2" type="radio" name="inserts">
+						<input id="insert2" type="radio" name="inserts" />
 						<label for="insert2" title="Photos">Photos</label>
-						
 						<section id="content-insert1">
-							<p>
-								No documents
-							</p>
+							<p>No documents</p>
 						</section>
 						<section id="content-insert2">
-							<p>
-								No photos
-							</p>
+							<p>No photos</p>
 						</section>
 					</div>
 				</div>
-			</li>
-			<li><a href="#bt4">Clear the story</a>
-				<a href="#cl4" class="overlay" id="bt4"></a>
+			</li>-->
+			<li>
+				<a href="#bt4">Clear the story</a>
+				<a class="overlay" href="#cl4" id="bt4"></a>
 				<div class="content4">
-					<a class="exit4" href="#exit"></a>
 					<h1>Are you sure you want to clear the story?</h1>
-					<button class="yes">Yes</button>
-					<button class="no">No</button>
+					<a href="#"><button class="yes" id="clearTheStory">Yes</button></a>
+					<a href="#"><button class="no">No</button></a>
 				</div>
 			</li>
-			<li><a href="#bt5">Settings</a>
-				<a href="#cl5" class="overlay" id="bt5"></a>
+			<li>
+				<a href="#bt5">Settings</a>
+				<a class="overlay" href="#cl5" id="bt5"></a>
 				<div class="content5">
-					<a class="exit5" href="#exit"></a>
-					<h1>Settings</h1>
-					<h1>Old Password:</h1>
-					<h1>New password:</h1>
-					<h1>Repeat password:</h1>
-					<p><input type="password" maxlength="25" name="password1" class="pass1"></p>
-					<p><input type="password" maxlength="25" name="password2" class="pass2"></p>
-					<p><input type="password" maxlength="25" name="password3" class="pass3"></p>
-					<p><button type="button" class="change"></button></p>
-					<h1>E-mail:</h1>
-					<p><input type="email" class="email"></p>
-					<h1>Language:</h1>
+					<form id="editProfilePasswordForm">
+						<a class="exit" href="#"></a>
+						<h1>Settings</h1>
+						<h1><label for="oldPassword">Old Password:</label></h1>
+						<h1><label for="newPassword1">New password:</label></h1>
+						<h1><label for="newPassword2">Repeat password:</label></h1>
+						<h1></h1>
+						<p><input class="oldPassword" id="oldPassword" pattern="^\w{6,20}$" required type="password" /></p>
+						<p><input class="newPassword1" id="newPassword1" pattern="^\w{6,20}$" required type="password" /></p>
+						<p><input class="newPassword2" id="newPassword2" pattern="^\w{6,20}$" required type="password" /></p>
+						<p></p>
+						<p><button class="change" type="submit"></button></p>
+					</form>
+					<!--<h1>Language:</h1>
 					<div class="language">
 						<select name="" id="lead-in" class="select">
-							<option font-family: 'Сomic Sans MS', Cursive; value="eng">English</option>
-							<option font-family: 'Сomic Sans MS', Cursive; value="rus"> Russian</option>
+							<option style="font-family: 'Сomic Sans MS', Cursive;" value="eng">English</option>
+							<option style="font-family: 'Сomic Sans MS', Cursive;" value="rus"> Russian</option>
 						</select>
-						<script>
-							$('#lead-in').click(function() {
-								if($("select#lead-in :selected").val() == "rus") {
-									$("select#lead-in").attr('style');
-								}
-								if($("select#lead-in :selected").val() == "eng") {
-									$("select#lead-in").attr('style');
-								}
-								console.log('select color: '+$("select#lead-in :selected").val());
-							});
-						</script>
-					</div>
+					</div>-->
+				</div>
 			</li>
-			<li><a href="#bt6">Exit</a>
-				<a href="#cl6" class="overlay" id="bt6"></a>
+			<li>
+				<a href="#bt6">Exit</a>
+				<a class="overlay" href="#cl6" id="bt6"></a>
 				<div class="content6">
-					<a class="exit6" href="#exit"></a>
 					<h1>Are you sure you want to go out?</h1>
-					<a href="/users/logout"><button class="yes">Yes</button></a>
-					<button class="no">No</button>
+					<button class="yes" id="logout">Yes</button>
+					<a href="#"><button class="no">No</button></a>
 				</div>
 			</li>
 		</ul>
 	</div>
-	<div id="right-bottom-row">
-	</div>
+	<!--<div id="right-bottom-row"></div>-->
 </aside>
-
-<script type="text/javascript" src="../public/scripts/chat.js">
-</script>
-<script>
-	changeEnter = () => {	
-		if (window.event.keyCode == 13) {
-			bttn.click();
-		}
-	}
-</script>
 </body>
+<script type="text/javascript" src="scripts/chat.js"></script>
 </html>
